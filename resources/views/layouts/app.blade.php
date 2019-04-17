@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link href="/css/app.css" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -32,5 +32,7 @@
     </head>
     <body>
 @yield('content')
+@include('inc.sidebar')
+
     </body>
 </html>
