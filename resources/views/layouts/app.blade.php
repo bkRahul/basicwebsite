@@ -9,30 +9,24 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet">
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-        </style>
     </head>
     <body>
-@yield('content')
-@include('inc.sidebar')
-
+        @include('inc.navbar')
+        <div class="container">
+        @if ( Request::is('/') )
+            @include('inc.showcase')
+        @endif    
+            <div class="row">    
+                <div class="col-md-8">
+                    @yield('content')
+                </div>
+                <div class="col-md-4">
+                    @include('inc.sidebar')
+                </div>
+            </div>    
+        </div>
     </body>
+    <footer class="footer text-center bg-primary">
+        <span>Welcome to Laravel</span>
+    </footer>
 </html>
