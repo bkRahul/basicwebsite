@@ -10662,6 +10662,10 @@ a.text-dark:focus {
   }
 }
 
+.navbar {
+  margin-bottom: 25px;
+}
+
 .footer {
   color: #fff;
   margin-top: 25px;
